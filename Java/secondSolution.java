@@ -19,6 +19,10 @@ public class secondSolution {
 
 		ints.remove(ints.size() - 1); // fenceposting
 		System.out.println(sums(ints));
+
+		for (int i = -14; i < 14; i++) {
+			System.out.println((-1)%12);
+		}
 	}
 
 	public static int sums(ArrayList<Integer> arr) {

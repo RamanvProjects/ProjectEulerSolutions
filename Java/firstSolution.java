@@ -9,7 +9,6 @@ public class firstSolution {
 				sum += i;
 			}	
 		}
-
 		System.out.println(sum);
 	}
 }
