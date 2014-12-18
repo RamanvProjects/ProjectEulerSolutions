@@ -1,7 +1,7 @@
 public class thirdSolution {
 	public static void main(String[] args) {
 		long num = Integer.MAX_VALUE;
-		System.out.println(largestFactor(num));
+		System.out.println(largestFactor2(201));
 	}
 
 	//This turned out to be not used in the code, but it's a pretty interesting primality test
@@ -31,5 +31,19 @@ public class thirdSolution {
 		} else {
 			return max;
 		}
+	}
+
+	public static long largestFactor2 (long n) {
+		int i = 2;
+		int max = 0;
+		while(n > 1) {
+			if (n % i == 0) {
+				n /= i;
+				max = Math.max(i, max);
+				i = 1;
+			}
+			i++;
+		}
+		return max;
 	}
 } 
