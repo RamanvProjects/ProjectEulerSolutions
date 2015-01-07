@@ -1,22 +1,36 @@
 //Also pretty easy, factors code is partially recycled from secondSolution
+//First version didn't answer question correctly
+/**
+ * Let's do some math
+ *
+ *
+ * First solution was completely wrong (check earlier commits)
+ *
+ * Use Euclids algorithm for GCD 
+ *
+ * LCM = |a.b|/gcd(a,b)
+ */
 import java.util.*;
+
 public class fifthSolution {
 	public static void main(String[] args) {
-		ArrayList<Integer> result = new ArrayList<Integer>();
-		int numMax = 10; //Change this for different answers
+		int length = 20; //change for different sizes
+		Integer[] arr = new Integer[length]; //populating array
 
-		for (int i = 1; i < numMax; i++) {
-			result.addAll(uniqueFactors(i));
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = i + 1;
 		}
-		System.out.println(result);
-		Set<Integer> removeDups = new HashSet<Integer>(result);
-		System.out.println(removeDups);
-		System.out.println(multiSet(removeDups));
+
+		while (arrs.size() > 1) {
+			arrs.set(0, lcm(arrs.get(0), arrs.remove(1)));
+		}
+
+		System.out.println(arrs.get(0));
 	}
 
 	/**
 	 * Finds unique factors and returns an arraylist with those unique factors
-	 * Test
+	 * Test, Not necessary for code apparently, I'll leave it because it's interesting
 	 * @return ArrayList of Unique Factors
 	 */
 	public static ArrayList<Integer> uniqueFactors (long n) {
@@ -35,12 +49,16 @@ public class fifthSolution {
 		return answer;
 	}
 
-	public static int multiSet (Set<Integer> ints) {
-		int result = 1;
-		for (Integer num : ints) {
-			result *= num;
-		}
+	public static int lcm (int a, int b) {
+		return Math.abs(a * b)/gcd(a, b);
+	}
 
-		return result;
+	public static int gcd (int a, int b) {
+		while (b != 0) {
+			int temp = b;
+			b = a % b;
+			a = temp;
+		}
+		return a;
 	}
 }
