@@ -7,13 +7,13 @@ public class MontyHallProblemTests {
 	public static void main(String[] args) {
 		int notSwitchCount = 0;
 		int switchCount = 0;
+
 		for (int i = 0; i < 1000; i++) {
 			boolean[] arr = {false, false, false};
 			Random r = new Random();
 			int answer = r.nextInt(3);
 			arr[answer] = true;
-
-
+ 
 			Random choice = new Random();
 			int pick = choice.nextInt(3);
 
@@ -28,7 +28,8 @@ public class MontyHallProblemTests {
 			}
 		}
 
-		System.out.println(notSwitchCount + " " + switchCount);
+		System.out.println("Without switching: " + notSwitchCount + "\n"
+						 + "With switching:    " + switchCount);
 	}
 
 	/* public static boolean methodOne(int choice, int answer) {
@@ -47,11 +48,7 @@ public class MontyHallProblemTests {
 
 	public static int switchPick(int answer, int pick) {
 		Random r = new Random();
-		ArrayList<Integer> choices = new ArrayList<Integer>();
-
-		choices.add(0);
-		choices.add(1);
-		choices.add(2);
+		ArrayList<Integer> choices = new ArrayList<Integer>(Arrays.asList(0, 1, 2));
 
 		if (pick != answer) {
 			choices.remove(pick); 

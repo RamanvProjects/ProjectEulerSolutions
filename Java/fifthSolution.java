@@ -53,6 +53,12 @@ public class fifthSolution {
 		return Math.abs(a * b)/gcd(a, b);
 	}
 
+	/**
+	 * [gcd description]
+	 * @param  a [description]
+	 * @param  b [description]
+	 * @return   [description]
+	 */
 	public static int gcd (int a, int b) {
 		while (b != 0) {
 			int temp = b;
