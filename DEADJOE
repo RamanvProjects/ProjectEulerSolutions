@@ -1,0 +1,12 @@
+
+*** These modified files were found in JOE when it aborted on Sun Jul 12 21:10:14 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+java
+
+*** File '* Startup Log *'
+Processing '/usr/local/Cellar/joe/4.0/etc/joe/joerc'...
+Processing '/usr/local/Cellar/joe/4.0/etc/joe/ftyperc'...
+Finished processing /usr/local/Cellar/joe/4.0/etc/joe/ftyperc
+Finished processing /usr/local/Cellar/joe/4.0/etc/joe/joerc

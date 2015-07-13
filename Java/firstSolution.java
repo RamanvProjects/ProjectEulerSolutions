@@ -7,7 +7,7 @@ public class firstSolution {
 				sum += i;
 			} else if (i % 5 == 0) {
 				sum += i;
-			}	
+			}
 		}
 		System.out.println(sum);
 	}
